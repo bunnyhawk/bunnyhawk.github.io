@@ -1,0 +1,16 @@
+<nav id="nav" class="flex justify-between items-center flex-col sm:flex-row">
+    <a
+        href="/submit"
+        class="bg-primary border border-primary active:border-text hover:border-text focus:border-text px-4 py-2 rounded text-text sm:order-2 order-1 mb-5 sm:mb-0"
+    >
+        Honor a Loved One
+    </a>
+    <ul class="flex flex-col sm:flex-row sm:order-1 order-2 text-center">
+        {% for item in navigation.main %}
+        <li class="mb-1 sm:mr-4">
+            <a href="{{ item.url | safe }}" class="underline active:text-primary hover:text-primary focus:text-primary"
+            {% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>

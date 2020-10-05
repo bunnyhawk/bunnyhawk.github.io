@@ -1,0 +1,147 @@
+:root {
+  --timeout: 500ms;
+  --list-item-max-height: 30px;
+  --color-primary: #FF3C3C;
+  --color-theme: #0A0A0A;
+  --color-text: #fff;
+}
+
+//==========  Imports  ==========//
+
+// Import Tailwind preflight
+@tailwind base;
+
+
+// Import our custom base styles
+@import 'base/all';
+
+
+// Import Tailwind components
+@tailwind components;
+
+
+// Import our custom component styles
+@import 'components/all';
+
+
+// Import Tailwind utilities
+// TailwindCSS recommends leaving utilities till last to ensure they aren't overwritten.
+@tailwind utilities;
+
+
+html,
+body,
+#root,
+.container {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.bg-theme,
+.bg-text {
+  transition: background-color 300ms ease;
+}
+.color-theme,
+.color-text {
+  transition: color 300ms ease;
+}
+
+.bg-primary.text-text {
+  color: #fff;
+}
+
+.home__header {
+  min-height: 140px;
+  max-width: 690px;
+}
+
+.termsLink:after {
+  content: '|';
+  display: inline-block;
+  position: relative;
+  padding-left: .5rem;
+}
+.termsLink:hover:after {
+  color: #fff !important;
+}
+
+.honorForm {
+  max-width: 350px;
+}
+
+.field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+}
+.__react_component_tooltip {
+  font-size: 16px;
+  opacity: 1 !important;
+  padding: 0;
+  max-width: 90vw;
+  width: 700px;
+}
+
+.light .__react_component_tooltip {
+  background-color: white;
+  box-shadow: 1px 5px 5px rgba(158, 158, 158, .5);
+}
+.light .__react_component_tooltip:after {
+  border-top-color: #fafafa !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .__react_component_tooltip.show {
+    left: 20px !important;
+    top: auto !important;
+    position: fixed;
+    bottom: 20px;
+  }
+}
+
+.totalNationalCount {
+  opacity: 0;
+  transition: opacity 1000ms ease-in;
+}
+
+.totalNationalCount.show {
+  opacity: 1;
+}
+
+.search {
+  max-width: 300px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.pristine-error {
+  color: var(--color-primary);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 14px;
+}
+
+.data {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+
+  &.loaded {
+    opacity: 1;
+  }
+}

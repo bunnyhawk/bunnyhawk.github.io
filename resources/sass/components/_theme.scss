@@ -1,0 +1,68 @@
+.themeChange {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.themeChange svg {
+  fill: var(--color-text);
+  width: 100%;
+}
+
+.tgl {
+  display: none;
+}
+
+.tgl-flat + .tgl-btn {
+  padding: 2px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  background: var(--color-theme);
+  border: 2px solid var(--color-text);
+  border-radius: 2em;
+}
+
+.tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 1.5em;
+  height: 1em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tgl-flat + .tgl-btn:after {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  background: var(--color-text);
+  content: "";
+  border-radius: 1em;
+}
+.tgl + .tgl-btn:after {
+  left: 0;
+}
+
+.tgl + .tgl-btn:after {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+
+.tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+.tgl-flat:checked + .tgl-btn:after {
+  left: 50%;
+  background: var(--color-text);
+}
+
+.tgl-flat:checked + .tgl-btn {
+  border: 2px solid var(--color-text);
+}

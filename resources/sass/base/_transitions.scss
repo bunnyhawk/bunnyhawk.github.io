@@ -1,0 +1,41 @@
+.fade-enter {
+  max-height: 0;
+  opacity: 0;
+}
+
+.fade-enter-active {
+  max-height: var(--list-item-max-height);
+  opacity: 1;
+  transition: all var(--timeout);
+  transition: all 300ms;
+}
+
+.fade-exit {
+  max-height: var(--list-item-max-height);
+  opacity: 1;
+}
+
+.fade-exit-active {
+  max-height: 0;
+  opacity: 0;
+  transition: all var(--timeout);
+  transition: all 300ms;
+}
+
+.submit-enter {
+  opacity: 0;
+}
+
+.submit-enter-active {
+  opacity: 1;
+  transition: opacity var(--timeout);
+}
+
+.submit-exit {
+  opacity: 1;
+}
+
+.submit-exit-active {
+  opacity: 0;
+  transition: opacity 0;
+}

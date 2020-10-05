@@ -1,0 +1,24 @@
+.nameList__item {
+  display: inline;
+}
+.nameList__item,
+.nameList__item button,
+.nameList__item .nameList__itemRecord {
+  word-wrap: break-word;
+}
+.nameList__item > .nameList__itemRecord:after {
+  box-shadow: none;
+  content: '/';
+  display: inline-block;
+  position: relative;
+  padding-left: .5rem;
+}
+.nameList__item:last-of-type > .nameList__itemRecord:after {
+  content: none;
+}
+.nameList__itemRecord {
+  cursor: pointer;
+}
+.nameList__itemRecord:hover:after {
+  color: #fff;
+}

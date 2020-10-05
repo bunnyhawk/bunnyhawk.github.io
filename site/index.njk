@@ -1,0 +1,61 @@
+---
+layout: default
+meta_title: Home
+meta_description: COVID-19 • In Memoriam
+body_class: home
+title: COVID-19 • In Memoriam
+initialCount: 200,000
+js: ['/js/home.js']
+---
+
+<main class="bg-theme text-text text-center">
+    <div class="home__header m-auto">
+    <header>
+        <h1 class="text-2xl leading-8 font-serif font-bold mb-2"><span id="initialCount" class="text-primary data">{{ initialCount }}</span> Americans
+        have lost their lives to
+        <span class="whitespace-no-wrap">COVID-19</span>.<br />
+        These are their names.</h1>
+    </header>
+    <p class="leading-tight my-8">
+        COVID-19 is caused by a coronavirus called SARS-CoV-2. Symptoms include fever, chills, cough, extreme fatigue, difficulty breathing, and new loss of taste or smell. The virus has devastated our nation, disproportionally harming Black and Brown communities — and engulfing the most vulnerable among us.
+    </p>
+    
+    <div class="search flex items-end mx-auto mb-10">
+        <div class="w-full mr-3">
+        <label htmlFor="search" class="block text-sm normal-case text-left sr-only">
+            Find someone
+        </label>
+        <input
+            type="text"
+            id="search"
+            name="search"
+            class="w-full bg-theme text-base border-b border-solid border-text p-1"
+        />
+        </div>
+        <button
+        id="searchButton"
+        class="border border-solid border-text px-2 py-1 p-1 active:border-primary hover:border-primary focus:border-primary rounded text-sm">
+            Search
+        </button>
+    </div>
+    </div>
+    <div id="nameList"></div>
+
+    {# <div class="dots flex justify-center text-text">
+    {(status === FETCHING || queryStatus === FETCHING) && (
+        <div>
+        <span class="dot dot1">.</span>
+        <span class="dot dot2">.</span>
+        <span class="dot dot3">.</span>
+        </div>
+    )}
+    </div> #}
+    <button
+    id="viewMore"
+    class="bg-text text-theme rounded border border-solid border-text px-5 py-2 mt-8 active:border-primary hover:border-primary focus:border-primary"
+    >
+    View More
+    </button>
+</main>
+
+

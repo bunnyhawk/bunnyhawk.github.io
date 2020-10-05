@@ -1,0 +1,28 @@
+.tooltip {
+  border-radius: 5px;
+  display: none;
+  width: 500px;
+  max-width: 90vw;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .tooltip[data-show] {
+    left: 20px !important;
+    top: auto !important;
+    position: fixed;
+    bottom: 20px !important;
+    transform: none !important;
+  }
+}
+
+.light .tooltip {
+  background-color: white;
+  box-shadow: 1px 5px 5px rgba(158, 158, 158, .5);
+  color: black;
+}
+
+.tooltip[data-show] {
+  display: block;
+  position: fixed;
+}
