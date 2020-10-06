@@ -24,11 +24,6 @@
 @import 'components/all';
 
 
-// Import Tailwind utilities
-// TailwindCSS recommends leaving utilities till last to ensure they aren't overwritten.
-@tailwind utilities;
-
-
 html,
 body,
 #root,
@@ -145,3 +140,7 @@ code {
     opacity: 1;
   }
 }
+
+// Import Tailwind utilities
+// TailwindCSS recommends leaving utilities till last to ensure they aren't overwritten.
+@tailwind utilities;

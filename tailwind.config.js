@@ -2,6 +2,7 @@ module.exports = {
   purge: [
     'dist/**/*.html',
     'site/**/*.njk',
+    'resources/**/*.js',
     'resources/**/*.scss',
   ],
   theme: {

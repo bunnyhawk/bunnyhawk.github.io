@@ -1,17 +1,13 @@
 {
-  "name": "skeleventy",
-  "version": "2.0.0",
-  "description": "Skeleventy - A skeleton boilerplate built with Eleventy",
+  "name": "covid-names",
+  "version": "1.0.0",
+  "description": "A covid memorial website",
   "scripts": {
     "dev": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve & NODE_ENV=development ENV_FILE=./.env webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "production": "NODE_ENV=production ENV_FILE=./.env webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && npx @11ty/eleventy --config=eleventy.config.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/josephdyer/skeleventy.git"
-  },
-  "author": "Joseph Dyer",
-  "license": "MIT",
+  "author": "Robert Higdon",
+  "license": "UNLICENSED",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "eslint": "^7.2.0",

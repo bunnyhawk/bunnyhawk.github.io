@@ -1,16 +1,16 @@
 {
     "name": "COVID-19 • In Memoriam",
-    "url": "https://covidmemoriam.netlify.app",
+    "url": "https://www.rememberingcovid19.co",
     "author": {
         "name": "Robert Higdon",
         "email": "positronicshell@gmail.com",
         "handle": "@positronicshell"
     },
     "images": {
-        "logo": "/images/logo/logo.svg",
+        "logo": "/images/logo512.png",
         "favicon": "/images/favicon.ico",
-        "twitter": "/images/meta/twitter.jpg",
-        "og": "/images/meta/og.jpg"
+        "twitter": "/images/logo512.png",
+        "og": "/images/logo512.png"
     },
     "contact": {
         "email": "positronicshell@gmail.com"

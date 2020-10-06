@@ -60,34 +60,37 @@ if (mix.inProduction()) {
   // Remove any unused CSS using Purge
   mix
 
-    .purgeCss({
-      folders: ['site'],
-      extensions: ['html', 'njk'],
-      whitelist: [
-        'body',
-        'html',
-        'a',
-        'h1',
-        'h2',
-        'h3',
-        'h4',
-        'p',
-        'blockquote',
-        'breadcrumbs',
-        'content',
-        'form',
-        'input',
-        'textarea',
-        'intro',
-        'btn',
-        'loaded',
-        'page-title',
-        'required',
-        'row',
-        'visually-hidden',
-        'menu-visible',
-      ],
-    })
+    // .purgeCss({
+    //   folders: ['site', 'resources/js'],
+    //   extensions: ['html', 'njk', 'js'],
+    //   whitelist: [
+    //     'body',
+    //     'html',
+    //     'a',
+    //     'h1',
+    //     'h2',
+    //     'h3',
+    //     'h4',
+    //     'p',
+    //     'blockquote',
+    //     'breadcrumbs',
+    //     'content',
+    //     'form',
+    //     'input',
+    //     'textarea',
+    //     'intro',
+    //     'btn',
+    //     'loaded',
+    //     'page-title',
+    //     'required',
+    //     'row',
+    //     'visually-hidden',
+    //     'menu-visible',
+    //     'tooltip',
+    //     'nameList__item',
+    //     'nameList__itemRecord',
+    //   ],
+    // })
 
     // Minifies CSS & JS files
     .minify(`${paths.sass.dest}main.css`)

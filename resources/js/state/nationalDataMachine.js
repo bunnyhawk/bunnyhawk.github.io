@@ -72,7 +72,7 @@ const nationalDataMachine = createMachine(
 );
 
 export const nationalDataService = interpret(nationalDataMachine, { devTools: true })
-  .onTransition((state) => console.log(state))
+  .onTransition((state) => console.log(state.value))
   .start();
 
 nationalDataService.send('FETCH');
