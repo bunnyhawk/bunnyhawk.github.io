@@ -1,0 +1,5 @@
+
+User-agent: *
+Disallow:
+
+Sitemap: https://www.rememberingcovid19.co/sitemap.xml
