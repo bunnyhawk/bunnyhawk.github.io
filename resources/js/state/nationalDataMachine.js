@@ -1,6 +1,7 @@
 import { createMachine, interpret, assign } from 'xstate';
 
 const SUMMARY_API = 'https://api.covidtracking.com/v1/us/current.json';
+const INITIAL_DATA = 202675;
 
 function updateData(deaths) {
   const dataContainer = document.getElementById('initialCount');
@@ -17,12 +18,17 @@ const fetchData = () => {
     return new Promise(((resolve) => resolve({ data: parsedData })));
   }
   const handleFetch = async () => {
-    const response = await fetch(SUMMARY_API);
-    const data = await response.json();
+    try {
+      const response = await fetch(SUMMARY_API);
+      const data = await response.json();
 
-    sessionStorage.setItem('nationalData', JSON.stringify(data[0]));
-    updateData(data.death);
-    return { data: data[0] };
+      sessionStorage.setItem('nationalData', JSON.stringify(data[0]));
+      updateData(data.death);
+      return { data: data[0] };
+    } catch (err) {
+      updateData(INITIAL_DATA);
+      return { data: INITIAL_DATA };
+    }
   };
   return handleFetch();
 };

@@ -1,7 +1,7 @@
 import { createMachine, interpret, assign } from 'xstate';
 import { setupToolTips } from '@modules/tooltips';
 import { nameList } from '../components';
-import initialData from '../initialData.json';
+import initialData from '../initialData2.json';
 
 const mapRecords = (records) => records.map((record) => ({
   id: record.id,
@@ -16,13 +16,13 @@ const buildList = (records) => {
 
 const AIR_TABLE_BASE_URL = 'https://api.airtable.com/v0/appAaEysX2qTVLYXy/covid-memorial?view=Grid%20view';
 
-const fetchData = (context, { query, offset }) => {
+const fetchData = (context, { query }) => {
   let url = AIR_TABLE_BASE_URL;
-
+  console.log(context);
   if (query) {
     url += `&filterByFormula=SEARCH("${query.toLowerCase()}",LOWER({name}))`;
-  } else if (offset) {
-    url += `&offset=${offset}`;
+  } else if (context.offset) {
+    url += `&sort%5B0%5D%5Bfield%5D=age&sort%5B0%5D%5Bdirection%5D=asc&offset=${context.offset}`;
   }
 
   return fetch(url, {
@@ -34,6 +34,7 @@ const fetchData = (context, { query, offset }) => {
     .then((res) => res.json())
     .then((res) => {
       const records = query ? res.records : [...context.names, ...res.records];
+      document.querySelector('.dots').classList.toggle('is-visible');
       buildList(records);
       return { ...res, records };
     });
@@ -103,7 +104,7 @@ const fetchMachine = createMachine(
 );
 
 export const namesService = interpret(fetchMachine, { devTools: true })
-  .onTransition((state) => console.log(state.value))
+  .onTransition((state) => console.log(state.context))
   .start();
 
 namesService.send('INITIALIZE');

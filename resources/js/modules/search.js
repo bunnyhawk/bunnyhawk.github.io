@@ -2,11 +2,15 @@ import { namesService } from '@state/namesMachine';
 
 const viewMoreButton = document.getElementById('viewMore');
 const searchButton = document.getElementById('searchButton');
+const loading = document.querySelector('.dots');
 
 let hasValue = false;
 
 if (viewMoreButton) {
-  const fetchMoreData = () => namesService.send('FETCH');
+  const fetchMoreData = () => {
+    loading.classList.toggle('is-visible');
+    namesService.send('FETCH');
+  };
   viewMoreButton.addEventListener('click', fetchMoreData);
 }
 
@@ -25,6 +29,7 @@ if (searchButton) {
     hasValue = true;
     namesService.send('FETCH', { query: searchInput.value });
     searchButton.innerText = 'Clear';
+    loading.classList.toggle('is-visible');
   };
   searchButton.addEventListener('click', searchForName);
 }

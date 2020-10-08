@@ -6,6 +6,12 @@
 .dots {
   color: var(--color-text);
   min-height: 50px;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+
+  &.is-visible {
+    opacity: 1;
+  }
 }
 .dot1 {
   animation: visibility 2s linear infinite;

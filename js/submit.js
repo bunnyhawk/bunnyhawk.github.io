@@ -1,1 +1,1400 @@
-!function(t){var e={};function r(n){if(e[n])return e[n].exports;var i=e[n]={i:n,l:!1,exports:{}};return t[n].call(i.exports,i,i.exports,r),i.l=!0,i.exports}r.m=t,r.c=e,r.d=function(t,e,n){r.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:n})},r.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},r.t=function(t,e){if(1&e&&(t=r(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var i in t)r.d(n,i,function(e){return t[e]}.bind(null,i));return n},r.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return r.d(e,"a",e),e},r.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},r.p="/",r(r.s=25)}({10:function(t,e,r){t.exports=r(13)},13:function(t,e,r){var n=function(t){"use strict";var e=Object.prototype,r=e.hasOwnProperty,n="function"==typeof Symbol?Symbol:{},i=n.iterator||"@@iterator",o=n.asyncIterator||"@@asyncIterator",a=n.toStringTag||"@@toStringTag";function s(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{s({},"")}catch(t){s=function(t,e,r){return t[e]=r}}function u(t,e,r,n){var i=e&&e.prototype instanceof f?e:f,o=Object.create(i.prototype),a=new L(n||[]);return o._invoke=function(t,e,r){var n="suspendedStart";return function(i,o){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===i)throw o;return O()}for(r.method=i,r.arg=o;;){var a=r.delegate;if(a){var s=w(a,r);if(s){if(s===l)continue;return s}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var u=c(t,e,r);if("normal"===u.type){if(n=r.done?"completed":"suspendedYield",u.arg===l)continue;return{value:u.arg,done:r.done}}"throw"===u.type&&(n="completed",r.method="throw",r.arg=u.arg)}}}(t,r,a),o}function c(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}t.wrap=u;var l={};function f(){}function p(){}function h(){}var d={};d[i]=function(){return this};var m=Object.getPrototypeOf,v=m&&m(m(T([])));v&&v!==e&&r.call(v,i)&&(d=v);var y=h.prototype=f.prototype=Object.create(d);function g(t){["next","throw","return"].forEach((function(e){s(t,e,(function(t){return this._invoke(e,t)}))}))}function b(t,e){var n;this._invoke=function(i,o){function a(){return new e((function(n,a){!function n(i,o,a,s){var u=c(t[i],t,o);if("throw"!==u.type){var l=u.arg,f=l.value;return f&&"object"==typeof f&&r.call(f,"__await")?e.resolve(f.__await).then((function(t){n("next",t,a,s)}),(function(t){n("throw",t,a,s)})):e.resolve(f).then((function(t){l.value=t,a(l)}),(function(t){return n("throw",t,a,s)}))}s(u.arg)}(i,o,n,a)}))}return n=n?n.then(a,a):a()}}function w(t,e){var r=t.iterator[e.method];if(void 0===r){if(e.delegate=null,"throw"===e.method){if(t.iterator.return&&(e.method="return",e.arg=void 0,w(t,e),"throw"===e.method))return l;e.method="throw",e.arg=new TypeError("The iterator does not provide a 'throw' method")}return l}var n=c(r,t.iterator,e.arg);if("throw"===n.type)return e.method="throw",e.arg=n.arg,e.delegate=null,l;var i=n.arg;return i?i.done?(e[t.resultName]=i.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=void 0),e.delegate=null,l):i:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,l)}function x(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function E(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function L(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(x,this),this.reset(!0)}function T(t){if(t){var e=t[i];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var n=-1,o=function e(){for(;++n<t.length;)if(r.call(t,n))return e.value=t[n],e.done=!1,e;return e.value=void 0,e.done=!0,e};return o.next=o}}return{next:O}}function O(){return{value:void 0,done:!0}}return p.prototype=y.constructor=h,h.constructor=p,p.displayName=s(h,a,"GeneratorFunction"),t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===p||"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,h):(t.__proto__=h,s(t,a,"GeneratorFunction")),t.prototype=Object.create(y),t},t.awrap=function(t){return{__await:t}},g(b.prototype),b.prototype[o]=function(){return this},t.AsyncIterator=b,t.async=function(e,r,n,i,o){void 0===o&&(o=Promise);var a=new b(u(e,r,n,i),o);return t.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},g(y),s(y,a,"Generator"),y[i]=function(){return this},y.toString=function(){return"[object Generator]"},t.keys=function(t){var e=[];for(var r in t)e.push(r);return e.reverse(),function r(){for(;e.length;){var n=e.pop();if(n in t)return r.value=n,r.done=!1,r}return r.done=!0,r}},t.values=T,L.prototype={constructor:L,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(E),!t)for(var e in this)"t"===e.charAt(0)&&r.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(r,n){return a.type="throw",a.arg=t,e.next=r,n&&(e.method="next",e.arg=void 0),!!n}for(var i=this.tryEntries.length-1;i>=0;--i){var o=this.tryEntries[i],a=o.completion;if("root"===o.tryLoc)return n("end");if(o.tryLoc<=this.prev){var s=r.call(o,"catchLoc"),u=r.call(o,"finallyLoc");if(s&&u){if(this.prev<o.catchLoc)return n(o.catchLoc,!0);if(this.prev<o.finallyLoc)return n(o.finallyLoc)}else if(s){if(this.prev<o.catchLoc)return n(o.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<o.finallyLoc)return n(o.finallyLoc)}}}},abrupt:function(t,e){for(var n=this.tryEntries.length-1;n>=0;--n){var i=this.tryEntries[n];if(i.tryLoc<=this.prev&&r.call(i,"finallyLoc")&&this.prev<i.finallyLoc){var o=i;break}}o&&("break"===t||"continue"===t)&&o.tryLoc<=e&&e<=o.finallyLoc&&(o=null);var a=o?o.completion:{};return a.type=t,a.arg=e,o?(this.method="next",this.next=o.finallyLoc,l):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),l},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),E(r),l}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var i=n.arg;E(r)}return i}}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:T(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=void 0),l}},t}(t.exports);try{regeneratorRuntime=n}catch(t){Function("r","regeneratorRuntime = r")(n)}},17:function(t,e,r){t.exports=function(){"use strict";var t={required:"This field is required",email:"This field requires a valid e-mail address",number:"This field requires a number",integer:"This field requires an integer value",url:"This field requires a valid website URL",tel:"This field requires a valid telephone number",maxlength:"This fields length must be < ${1}",minlength:"This fields length must be > ${1}",min:"Minimum value for this field is ${1}",max:"Maximum value for this field is ${1}",pattern:"Please match the requested format"};function e(t){var e=arguments;return this.replace(/\${([^{}]*)}/g,(function(t,r){return e[r]}))}function r(t){return t.pristine.self.form.querySelectorAll('input[name="'+t.getAttribute("name")+'"]:checked').length}var n={classTo:"form-group",errorClass:"has-danger",successClass:"has-success",errorTextParent:"form-group",errorTextTag:"div",errorTextClass:"text-help"},i=["required","min","max","minlength","maxlength","pattern"],o=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,a={},s=function(e,r){r.name=e,r.msg||(r.msg=t[e]),void 0===r.priority&&(r.priority=1),a[e]=r};function u(t,r,o){var s=this;function u(t,e,r,n){var i=a[r];if(i&&(t.push(i),n)){var o=n.split(",");o.unshift(null),e[r]=o}}function c(t){for(var r,n=[],i=!0,o=0;t.validators[o];o++){var a=t.validators[o],s=t.params[a.name]?t.params[a.name]:[];if(s[0]=t.input.value,!a.fn.apply(t.input,s)){if(i=!1,(r=a.msg)&&r.constructor&&r.call&&r.apply)n.push(a.msg(t.input.value,s));else{var u=t.messages[a.name]||a.msg;n.push(e.apply(u,s))}if(!0===a.halt)break}}return t.errors=n,i}function l(t){if(t.errorElements)return t.errorElements;var e=function(t,e){for(;(t=t.parentElement)&&!t.classList.contains(e););return t}(t.input,s.config.classTo),r=null,n=null;return(r=s.config.classTo===s.config.errorTextParent?e:e.querySelector("."+s.config.errorTextParent))&&((n=r.querySelector(".pristine-error"))||((n=document.createElement(s.config.errorTextTag)).className="pristine-error "+s.config.errorTextClass,r.appendChild(n),n.pristineDisplay=n.style.display)),t.errorElements=[e,n]}function f(t){var e=l(t),r=e[0],n=e[1];r&&(r.classList.remove(s.config.successClass),r.classList.add(s.config.errorClass)),n&&(n.innerHTML=t.errors.join("<br/>"),n.style.display=n.pristineDisplay||"")}function p(t){var e=function(t){var e=l(t),r=e[0],n=e[1];return r&&(r.classList.remove(s.config.errorClass),r.classList.remove(s.config.successClass)),n&&(n.innerHTML="",n.style.display="none"),e}(t)[0];e&&e.classList.add(s.config.successClass)}return function(t,e,r){t.setAttribute("novalidate","true"),s.form=t,s.config=function(t,e){for(var r in e)r in t||(t[r]=e[r]);return t}(e||{},n),s.live=!(!1===r),s.fields=Array.from(t.querySelectorAll("input:not([type^=hidden]):not([type^=submit]), select, textarea")).map(function(t){var e=[],r={},n={};return[].forEach.call(t.attributes,(function(t){if(/^data-pristine-/.test(t.name)){var o=t.name.substr(14);if(o.endsWith("-message"))return void(n[o.slice(0,o.length-8)]=t.value);"type"===o&&(o=t.value),u(e,r,o,t.value)}else~i.indexOf(t.name)?u(e,r,t.name,t.value):"type"===t.name&&u(e,r,t.value)})),e.sort((function(t,e){return e.priority-t.priority})),s.live&&t.addEventListener(~["radio","checkbox"].indexOf(t.getAttribute("type"))?"change":"input",function(t){s.validate(t.target)}.bind(s)),t.pristine={input:t,validators:e,params:r,messages:n,self:s}}.bind(s))}(t,r,o),s.validate=function(t,e){e=t&&!0===e||!0===t;var r=s.fields;!0!==t&&!1!==t&&(t instanceof HTMLElement?r=[t.pristine]:(t instanceof NodeList||t instanceof(window.$||Array)||t instanceof Array)&&(r=Array.from(t).map((function(t){return t.pristine}))));for(var n=!0,i=0;r[i];i++){var o=r[i];c(o)?!e&&p(o):(n=!1,!e&&f(o))}return n},s.getErrors=function(t){if(!t){for(var e=[],r=0;r<s.fields.length;r++){var n=s.fields[r];n.errors.length&&e.push({input:n.input,errors:n.errors})}return e}return t.tagName&&"select"===t.tagName.toLowerCase()?t.pristine.errors:t.length?t[0].pristine.errors:t.pristine.errors},s.addValidator=function(t,e,r,n,i){t instanceof HTMLElement?(t.pristine.validators.push({fn:e,msg:r,priority:n,halt:i}),t.pristine.validators.sort((function(t,e){return e.priority-t.priority}))):console.warn("The parameter elem must be a dom element")},s.addError=function(t,e){(t=t.length?t[0]:t).pristine.errors.push(e),f(t.pristine)},s.reset=function(){for(var t=0;s.fields[t];t++)s.fields[t].errorElements=null;Array.from(s.form.querySelectorAll(".pristine-error")).map((function(t){t.parentNode.removeChild(t)})),Array.from(s.form.querySelectorAll("."+s.config.classTo)).map((function(t){t.classList.remove(s.config.successClass),t.classList.remove(s.config.errorClass)}))},s.destroy=function(){s.reset(),s.fields.forEach((function(t){delete t.input.pristine})),s.fields=[]},s.setGlobalConfig=function(t){n=t},s}return s("text",{fn:function(t){return!0},priority:0}),s("required",{fn:function(t){return"radio"===this.type||"checkbox"===this.type?r(this):void 0!==t&&""!==t},priority:99,halt:!0}),s("email",{fn:function(t){return!t||o.test(t)}}),s("number",{fn:function(t){return!t||!isNaN(parseFloat(t))},priority:2}),s("integer",{fn:function(t){return!t||/^\d+$/.test(t)}}),s("minlength",{fn:function(t,e){return!t||t.length>=parseInt(e)}}),s("maxlength",{fn:function(t,e){return!t||t.length<=parseInt(e)}}),s("min",{fn:function(t,e){return!t||("checkbox"===this.type?r(this)>=parseInt(e):parseFloat(t)>=parseFloat(e))}}),s("max",{fn:function(t,e){return!t||("checkbox"===this.type?r(this)<=parseInt(e):parseFloat(t)<=parseFloat(e))}}),s("pattern",{fn:function(t,e){var r=e.match(new RegExp("^/(.*?)/([gimy]*)$"));return!t||new RegExp(r[1],r[2]).test(t)}}),u.addValidator=function(t,e,r,n,i){s(t,{fn:e,msg:r,priority:n,halt:i})},u}()},25:function(t,e,r){t.exports=r(26)},26:function(t,e,r){"use strict";r.r(e);var n=r(10),i=r.n(n),o=r(17),a=r.n(o);function s(t){return function(t){if(Array.isArray(t))return u(t)}(t)||function(t){if("undefined"!=typeof Symbol&&Symbol.iterator in Object(t))return Array.from(t)}(t)||function(t,e){if(!t)return;if("string"==typeof t)return u(t,e);var r=Object.prototype.toString.call(t).slice(8,-1);"Object"===r&&t.constructor&&(r=t.constructor.name);if("Map"===r||"Set"===r)return Array.from(t);if("Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r))return u(t,e)}(t)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function u(t,e){(null==e||e>t.length)&&(e=t.length);for(var r=0,n=new Array(e);r<e;r++)n[r]=t[r];return n}function c(t,e){if(null==t)return{};var r,n,i=function(t,e){if(null==t)return{};var r,n,i={},o=Object.keys(t);for(n=0;n<o.length;n++)r=o[n],e.indexOf(r)>=0||(i[r]=t[r]);return i}(t,e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(t);for(n=0;n<o.length;n++)r=o[n],e.indexOf(r)>=0||Object.prototype.propertyIsEnumerable.call(t,r)&&(i[r]=t[r])}return i}function l(t,e,r,n,i,o,a){try{var s=t[o](a),u=s.value}catch(t){return void r(t)}s.done?e(u):Promise.resolve(u).then(n,i)}var f=document.getElementById("honorForm"),p=document.getElementById("submissionProof"),h=f.querySelector('[type="submit"]'),d=new a.a(f),m=function(){var t,e=(t=i.a.mark((function t(e){var r,n,o;return i.a.wrap((function(t){for(;;)switch(t.prev=t.next){case 0:if(e.preventDefault(),!d.validate()){t.next=18;break}return h.disabled=!0,(r=Object.fromEntries(new FormData(e.target).entries())).submissionProof,n=c(r,["submissionProof"]),o=new FormData,Object.keys(n).forEach((function(t){o.append(t,n[t])})),s(p.files).forEach((function(t){o.append(t.name,t)})),t.prev=7,t.next=10,fetch("https://rdgqc6nd42.execute-api.us-west-2.amazonaws.com/dev/send-mail",{method:"POST",body:o});case 10:t.sent,t.next=16;break;case 13:t.prev=13,t.t0=t.catch(7),h.disabled=!1;case 16:h.disabled=!1,window.location.href="/submitted/";case 18:case"end":return t.stop()}}),t,null,[[7,13]])})),function(){var e=this,r=arguments;return new Promise((function(n,i){var o=t.apply(e,r);function a(t){l(o,n,i,a,s,"next",t)}function s(t){l(o,n,i,a,s,"throw",t)}a(void 0)}))});return function(t){return e.apply(this,arguments)}}();p.addEventListener("change",(function(t){var e="";(e=this.files&&this.files.length>1?(this.getAttribute("data-multiple-caption")||"").replace("{count}",this.files.length):t.target.value.split("\\").pop())&&(p.parentElement.querySelector("span").innerHTML=e)})),f.addEventListener("submit",m)}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./node_modules/@babel/runtime/node_modules/regenerator-runtime/runtime.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/node_modules/regenerator-runtime/runtime.js ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var runtime = (function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function define(obj, key, value) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+    return obj[key];
+  }
+  try {
+    // IE 8 has a broken Object.defineProperty that only works on DOM objects.
+    define({}, "");
+  } catch (err) {
+    define = function(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  exports.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunction.displayName = define(
+    GeneratorFunctionPrototype,
+    toStringTagSymbol,
+    "GeneratorFunction"
+  );
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      define(prototype, method, function(arg) {
+        return this._invoke(method, arg);
+      });
+    });
+  }
+
+  exports.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  exports.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      define(genFun, toStringTagSymbol, "GeneratorFunction");
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  exports.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return PromiseImpl.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return PromiseImpl.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new PromiseImpl(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  exports.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    if (PromiseImpl === void 0) PromiseImpl = Promise;
+
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList),
+      PromiseImpl
+    );
+
+    return exports.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        // Note: ["return"] must be used for ES3 parsing compatibility.
+        if (delegate.iterator["return"]) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  define(Gp, toStringTagSymbol, "Generator");
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  exports.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+
+  // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+  return exports;
+
+}(
+  // If this script is executing as a CommonJS module, use module.exports
+  // as the regeneratorRuntime namespace. Otherwise create a new empty
+  // object. Either way, the resulting object will be used to initialize
+  // the regeneratorRuntime variable at the top of this file.
+   true ? module.exports : undefined
+));
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  Function("r", "regeneratorRuntime = r")(runtime);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/@babel/runtime/node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
+/***/ "./node_modules/pristinejs/dist/pristine.js":
+/*!**************************************************!*\
+  !*** ./node_modules/pristinejs/dist/pristine.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function (global, factory) {
+     true ? module.exports = factory() :
+    undefined;
+}(this, (function () { 'use strict';
+
+    var lang = {
+        required: "This field is required",
+        email: "This field requires a valid e-mail address",
+        number: "This field requires a number",
+        integer: "This field requires an integer value",
+        url: "This field requires a valid website URL",
+        tel: "This field requires a valid telephone number",
+        maxlength: "This fields length must be < ${1}",
+        minlength: "This fields length must be > ${1}",
+        min: "Minimum value for this field is ${1}",
+        max: "Maximum value for this field is ${1}",
+        pattern: "Please match the requested format"
+    };
+
+    function findAncestor(el, cls) {
+        while ((el = el.parentElement) && !el.classList.contains(cls)) {}
+        return el;
+    }
+
+    function tmpl(o) {
+        var _arguments = arguments;
+
+        return this.replace(/\${([^{}]*)}/g, function (a, b) {
+            return _arguments[b];
+        });
+    }
+
+    function groupedElemCount(input) {
+        return input.pristine.self.form.querySelectorAll('input[name="' + input.getAttribute('name') + '"]:checked').length;
+    }
+
+    function mergeConfig(obj1, obj2) {
+        for (var attr in obj2) {
+            if (!(attr in obj1)) {
+                obj1[attr] = obj2[attr];
+            }
+        }
+        return obj1;
+    }
+
+    function isFunction(obj) {
+        return !!(obj && obj.constructor && obj.call && obj.apply);
+    }
+
+    var defaultConfig = {
+        classTo: 'form-group',
+        errorClass: 'has-danger',
+        successClass: 'has-success',
+        errorTextParent: 'form-group',
+        errorTextTag: 'div',
+        errorTextClass: 'text-help'
+    };
+
+    var PRISTINE_ERROR = 'pristine-error';
+    var SELECTOR = "input:not([type^=hidden]):not([type^=submit]), select, textarea";
+    var ALLOWED_ATTRIBUTES = ["required", "min", "max", 'minlength', 'maxlength', 'pattern'];
+    var EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    var validators = {};
+
+    var _ = function _(name, validator) {
+        validator.name = name;
+        if (!validator.msg) validator.msg = lang[name];
+        if (validator.priority === undefined) validator.priority = 1;
+        validators[name] = validator;
+    };
+
+    _('text', { fn: function fn(val) {
+            return true;
+        }, priority: 0 });
+    _('required', { fn: function fn(val) {
+            return this.type === 'radio' || this.type === 'checkbox' ? groupedElemCount(this) : val !== undefined && val !== '';
+        }, priority: 99, halt: true });
+    _('email', { fn: function fn(val) {
+            return !val || EMAIL_REGEX.test(val);
+        } });
+    _('number', { fn: function fn(val) {
+            return !val || !isNaN(parseFloat(val));
+        }, priority: 2 });
+    _('integer', { fn: function fn(val) {
+            return !val || /^\d+$/.test(val);
+        } });
+    _('minlength', { fn: function fn(val, length) {
+            return !val || val.length >= parseInt(length);
+        } });
+    _('maxlength', { fn: function fn(val, length) {
+            return !val || val.length <= parseInt(length);
+        } });
+    _('min', { fn: function fn(val, limit) {
+            return !val || (this.type === 'checkbox' ? groupedElemCount(this) >= parseInt(limit) : parseFloat(val) >= parseFloat(limit));
+        } });
+    _('max', { fn: function fn(val, limit) {
+            return !val || (this.type === 'checkbox' ? groupedElemCount(this) <= parseInt(limit) : parseFloat(val) <= parseFloat(limit));
+        } });
+    _('pattern', { fn: function fn(val, pattern) {
+            var m = pattern.match(new RegExp('^/(.*?)/([gimy]*)$'));return !val || new RegExp(m[1], m[2]).test(val);
+        } });
+
+    function Pristine(form, config, live) {
+
+        var self = this;
+
+        init(form, config, live);
+
+        function init(form, config, live) {
+
+            form.setAttribute("novalidate", "true");
+
+            self.form = form;
+            self.config = mergeConfig(config || {}, defaultConfig);
+            self.live = !(live === false);
+            self.fields = Array.from(form.querySelectorAll(SELECTOR)).map(function (input) {
+
+                var fns = [];
+                var params = {};
+                var messages = {};
+
+                [].forEach.call(input.attributes, function (attr) {
+                    if (/^data-pristine-/.test(attr.name)) {
+                        var name = attr.name.substr(14);
+                        if (name.endsWith('-message')) {
+                            messages[name.slice(0, name.length - 8)] = attr.value;
+                            return;
+                        }
+                        if (name === 'type') name = attr.value;
+                        _addValidatorToField(fns, params, name, attr.value);
+                    } else if (~ALLOWED_ATTRIBUTES.indexOf(attr.name)) {
+                        _addValidatorToField(fns, params, attr.name, attr.value);
+                    } else if (attr.name === 'type') {
+                        _addValidatorToField(fns, params, attr.value);
+                    }
+                });
+
+                fns.sort(function (a, b) {
+                    return b.priority - a.priority;
+                });
+
+                self.live && input.addEventListener(!~['radio', 'checkbox'].indexOf(input.getAttribute('type')) ? 'input' : 'change', function (e) {
+                    self.validate(e.target);
+                }.bind(self));
+
+                return input.pristine = { input: input, validators: fns, params: params, messages: messages, self: self };
+            }.bind(self));
+        }
+
+        function _addValidatorToField(fns, params, name, value) {
+            var validator = validators[name];
+            if (validator) {
+                fns.push(validator);
+                if (value) {
+                    var valueParams = value.split(',');
+                    valueParams.unshift(null); // placeholder for input's value
+                    params[name] = valueParams;
+                }
+            }
+        }
+
+        /***
+         * Checks whether the form/input elements are valid
+         * @param input => input element(s) or a jquery selector, null for full form validation
+         * @param silent => do not show error messages, just return true/false
+         * @returns {boolean} return true when valid false otherwise
+         */
+        self.validate = function (input, silent) {
+            silent = input && silent === true || input === true;
+            var fields = self.fields;
+            if (input !== true && input !== false) {
+                if (input instanceof HTMLElement) {
+                    fields = [input.pristine];
+                } else if (input instanceof NodeList || input instanceof (window.$ || Array) || input instanceof Array) {
+                    fields = Array.from(input).map(function (el) {
+                        return el.pristine;
+                    });
+                }
+            }
+
+            var valid = true;
+
+            for (var i = 0; fields[i]; i++) {
+                var field = fields[i];
+                if (_validateField(field)) {
+                    !silent && _showSuccess(field);
+                } else {
+                    valid = false;
+                    !silent && _showError(field);
+                }
+            }
+            return valid;
+        };
+
+        /***
+         * Get errors of a specific field or the whole form
+         * @param input
+         * @returns {Array|*}
+         */
+        self.getErrors = function (input) {
+            if (!input) {
+                var erroneousFields = [];
+                for (var i = 0; i < self.fields.length; i++) {
+                    var field = self.fields[i];
+                    if (field.errors.length) {
+                        erroneousFields.push({ input: field.input, errors: field.errors });
+                    }
+                }
+                return erroneousFields;
+            }
+            if (input.tagName && input.tagName.toLowerCase() === "select") {
+                return input.pristine.errors;
+            }
+            return input.length ? input[0].pristine.errors : input.pristine.errors;
+        };
+
+        /***
+         * Validates a single field, all validator functions are called and error messages are generated
+         * when a validator fails
+         * @param field
+         * @returns {boolean}
+         * @private
+         */
+        function _validateField(field) {
+            var errors = [];
+            var valid = true;
+            for (var i = 0; field.validators[i]; i++) {
+                var validator = field.validators[i];
+                var params = field.params[validator.name] ? field.params[validator.name] : [];
+                params[0] = field.input.value;
+                if (!validator.fn.apply(field.input, params)) {
+                    valid = false;
+
+                    if (isFunction(validator.msg)) {
+                        errors.push(validator.msg(field.input.value, params));
+                    } else {
+                        var error = field.messages[validator.name] || validator.msg;
+                        errors.push(tmpl.apply(error, params));
+                    }
+
+                    if (validator.halt === true) {
+                        break;
+                    }
+                }
+            }
+            field.errors = errors;
+            return valid;
+        }
+
+        /***
+         *
+         * @param elem => The dom element where the validator is applied to
+         * @param fn => validator function
+         * @param msg => message to show when validation fails. Supports templating. ${0} for the input's value, ${1} and
+         * so on are for the attribute values
+         * @param priority => priority of the validator function, higher valued function gets called first.
+         * @param halt => whether validation should stop for this field after current validation function
+         */
+        self.addValidator = function (elem, fn, msg, priority, halt) {
+            if (elem instanceof HTMLElement) {
+                elem.pristine.validators.push({ fn: fn, msg: msg, priority: priority, halt: halt });
+                elem.pristine.validators.sort(function (a, b) {
+                    return b.priority - a.priority;
+                });
+            } else {
+                console.warn("The parameter elem must be a dom element");
+            }
+        };
+
+        /***
+         * An utility function that returns a 2-element array, first one is the element where error/success class is
+         * applied. 2nd one is the element where error message is displayed. 2nd element is created if doesn't exist and cached.
+         * @param field
+         * @returns {*}
+         * @private
+         */
+        function _getErrorElements(field) {
+            if (field.errorElements) {
+                return field.errorElements;
+            }
+            var errorClassElement = findAncestor(field.input, self.config.classTo);
+            var errorTextParent = null,
+                errorTextElement = null;
+            if (self.config.classTo === self.config.errorTextParent) {
+                errorTextParent = errorClassElement;
+            } else {
+                errorTextParent = errorClassElement.querySelector('.' + self.config.errorTextParent);
+            }
+            if (errorTextParent) {
+                errorTextElement = errorTextParent.querySelector('.' + PRISTINE_ERROR);
+                if (!errorTextElement) {
+                    errorTextElement = document.createElement(self.config.errorTextTag);
+                    errorTextElement.className = PRISTINE_ERROR + ' ' + self.config.errorTextClass;
+                    errorTextParent.appendChild(errorTextElement);
+                    errorTextElement.pristineDisplay = errorTextElement.style.display;
+                }
+            }
+            return field.errorElements = [errorClassElement, errorTextElement];
+        }
+
+        function _showError(field) {
+            var errorElements = _getErrorElements(field);
+            var errorClassElement = errorElements[0],
+                errorTextElement = errorElements[1];
+
+            if (errorClassElement) {
+                errorClassElement.classList.remove(self.config.successClass);
+                errorClassElement.classList.add(self.config.errorClass);
+            }
+            if (errorTextElement) {
+                errorTextElement.innerHTML = field.errors.join('<br/>');
+                errorTextElement.style.display = errorTextElement.pristineDisplay || '';
+            }
+        }
+
+        /***
+         * Adds error to a specific field
+         * @param input
+         * @param error
+         */
+        self.addError = function (input, error) {
+            input = input.length ? input[0] : input;
+            input.pristine.errors.push(error);
+            _showError(input.pristine);
+        };
+
+        function _removeError(field) {
+            var errorElements = _getErrorElements(field);
+            var errorClassElement = errorElements[0],
+                errorTextElement = errorElements[1];
+            if (errorClassElement) {
+                // IE > 9 doesn't support multiple class removal
+                errorClassElement.classList.remove(self.config.errorClass);
+                errorClassElement.classList.remove(self.config.successClass);
+            }
+            if (errorTextElement) {
+                errorTextElement.innerHTML = '';
+                errorTextElement.style.display = 'none';
+            }
+            return errorElements;
+        }
+
+        function _showSuccess(field) {
+            var errorClassElement = _removeError(field)[0];
+            errorClassElement && errorClassElement.classList.add(self.config.successClass);
+        }
+
+        /***
+         * Resets the errors
+         */
+        self.reset = function () {
+            for (var i = 0; self.fields[i]; i++) {
+                self.fields[i].errorElements = null;
+            }
+            Array.from(self.form.querySelectorAll('.' + PRISTINE_ERROR)).map(function (elem) {
+                elem.parentNode.removeChild(elem);
+            });
+            Array.from(self.form.querySelectorAll('.' + self.config.classTo)).map(function (elem) {
+                elem.classList.remove(self.config.successClass);
+                elem.classList.remove(self.config.errorClass);
+            });
+        };
+
+        /***
+         * Resets the errors and deletes all pristine fields
+         */
+        self.destroy = function () {
+            self.reset();
+            self.fields.forEach(function (field) {
+                delete field.input.pristine;
+            });
+            self.fields = [];
+        };
+
+        self.setGlobalConfig = function (config) {
+            defaultConfig = config;
+        };
+
+        return self;
+    }
+
+    /***
+     *
+     * @param name => Name of the global validator
+     * @param fn => validator function
+     * @param msg => message to show when validation fails. Supports templating. ${0} for the input's value, ${1} and
+     * so on are for the attribute values
+     * @param priority => priority of the validator function, higher valued function gets called first.
+     * @param halt => whether validation should stop for this field after current validation function
+     */
+    Pristine.addValidator = function (name, fn, msg, priority, halt) {
+        _(name, { fn: fn, msg: msg, priority: priority, halt: halt });
+    };
+
+    return Pristine;
+
+})));
+
+
+/***/ }),
+
+/***/ "./resources/js/singles/submit.js":
+/*!****************************************!*\
+  !*** ./resources/js/singles/submit.js ***!
+  \****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var pristinejs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! pristinejs */ "./node_modules/pristinejs/dist/pristine.js");
+/* harmony import */ var pristinejs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(pristinejs__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+var API_URL = 'https://rdgqc6nd42.execute-api.us-west-2.amazonaws.com/dev/send-mail';
+var submitForm = document.getElementById('honorForm');
+var fileSubmit = document.getElementById('submissionProof');
+var submitButton = submitForm.querySelector('[type="submit"]');
+var pristine = new pristinejs__WEBPACK_IMPORTED_MODULE_1___default.a(submitForm);
+
+var onSubmit = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(event) {
+    var _Object$fromEntries, submissionProof, rest, body, response;
+
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            event.preventDefault();
+
+            if (!pristine.validate()) {
+              _context.next = 18;
+              break;
+            }
+
+            submitButton.disabled = true;
+            _Object$fromEntries = Object.fromEntries(new FormData(event.target).entries()), submissionProof = _Object$fromEntries.submissionProof, rest = _objectWithoutProperties(_Object$fromEntries, ["submissionProof"]);
+            body = new FormData();
+            Object.keys(rest).forEach(function (name) {
+              body.append(name, rest[name]);
+            });
+
+            _toConsumableArray(fileSubmit.files).forEach(function (file) {
+              body.append(file.name, file);
+            });
+
+            _context.prev = 7;
+            _context.next = 10;
+            return fetch(API_URL, {
+              method: 'POST',
+              body: body
+            });
+
+          case 10:
+            response = _context.sent;
+            _context.next = 16;
+            break;
+
+          case 13:
+            _context.prev = 13;
+            _context.t0 = _context["catch"](7);
+            submitButton.disabled = false;
+
+          case 16:
+            submitButton.disabled = false;
+            window.location.href = '/submitted/';
+
+          case 18:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee, null, [[7, 13]]);
+  }));
+
+  return function onSubmit(_x) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+function onFileUpload(e) {
+  var fileName = '';
+
+  if (this.files && this.files.length > 1) {
+    fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+  } else {
+    fileName = e.target.value.split('\\').pop();
+  }
+
+  if (fileName) fileSubmit.parentElement.querySelector('span').innerHTML = fileName;
+}
+
+fileSubmit.addEventListener('change', onFileUpload);
+submitForm.addEventListener('submit', onSubmit);
+
+/***/ }),
+
+/***/ 2:
+/*!**********************************************!*\
+  !*** multi ./resources/js/singles/submit.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! /Users/roberthigdon/Documents/covid-names/resources/js/singles/submit.js */"./resources/js/singles/submit.js");
+
+
+/***/ })
+
+/******/ });
