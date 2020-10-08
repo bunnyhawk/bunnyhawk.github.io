@@ -1,6 +1,6 @@
 {
   "name": "covid-names",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A covid memorial website",
   "scripts": {
     "dev": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve & NODE_ENV=development ENV_FILE=./.env webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
