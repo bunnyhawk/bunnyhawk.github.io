@@ -2,7 +2,6 @@ const theme = document.getElementById('themeChange');
 const isThemeLight = sessionStorage.getItem('theme') === 'light';
 
 function handleThemeChange() {
-  console.log('testing');
   const rootStyle = window.getComputedStyle(document.documentElement);
   const currTextColor = rootStyle.getPropertyValue('--color-text');
 
